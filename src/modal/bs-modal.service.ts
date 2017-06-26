@@ -23,9 +23,9 @@ export class BsModalService {
 
   /** Initialization of BsModalService, requires ElementRef, ViewContainerRef and Renderer instances */
   create(_element: ElementRef, _viewContainerRef: ViewContainerRef, _renderer: Renderer) {
-    this._backdropLoader = this.clf.createLoader<ModalBackdropComponent>(_element, _viewContainerRef, _renderer);
+    this._backdropLoader = this.clf.createLoader<ModalBackdropComponent>(null, null, null);
     this._modalLoader = this.clf
-      .createLoader<ModalContainerComponent>(_element, _viewContainerRef, _renderer);
+      .createLoader<ModalContainerComponent>(null, null, null);
     return this;
   }
 
